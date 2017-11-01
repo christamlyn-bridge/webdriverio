@@ -26,12 +26,4 @@ describe('search results', function () {
         ErrorPage.clickViewSchoolsButton();
         expect(browser.getUrl()).to.equal('https://www.google.com/maps/search/kenya+bridge+international+academies/');
     });
-
-    it('can use GRP location', function () {
-        FindPage.open();
-        expect(ResultsPage.resultsDisplayed()).to.be.undefined;
-        FindPage.clickUseMyLocation();
-        expect(ResultsPage.searchResults.getText()).to.not.be.null;
-        expect(ResultsPage.searchResults.isVisible()).to.be.true;
-    });
 });
